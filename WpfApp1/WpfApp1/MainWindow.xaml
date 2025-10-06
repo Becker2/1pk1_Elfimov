@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="Фио работника:" HorizontalAlignment="Left" Grid.Column="0" VerticalAlignment="Top" Margin="0, 0, 0, 0"></Label>
+        <TextBox x:Name="FIO" Height="15" Width="200" Margin="35, -300, 0, 0" HorizontalAlignment="Left"></TextBox>
+        <Label Content="День месяца:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0, 50, 0, 0" Grid.Column="0"></Label>
+        <TextBox x:Name="Day" Height="15" Width="200" HorizontalAlignment="Left" Margin="35, -200, 0, 0" TextChanged="Day_TextChanged"></TextBox>
+        <Label Content="Кол-во часов за день:" HorizontalAlignment="Left" Grid.Column="0" VerticalAlignment="Top" Margin="0, 100, 0, 0"></Label>
+        <TextBox x:Name="Hours" Height="15" Width="200" HorizontalAlignment="Left" Margin="35, -100, 0, 0" TextChanged="Hours_TextChanged"></TextBox>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="50" Content="Добавить" Name="Add" Click="Add_Click"></Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="50" Name="Export" Content="Экспорт" Click="Export_Click" ></Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Height="50" Name="Delete" Content="Удалить" Click="Delete_Click"></Button>
+        <ListBox Grid.Column="1" Name="Data"></ListBox>
+        <Button x:Name="Import" Margin="185,164,38,94" Click="Import_Click" ></Button>
+        <Button Name="d" Margin="24,192,273,122" Click="d_Click"></Button>
+    </Grid>
+</Window>

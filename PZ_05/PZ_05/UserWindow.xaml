@@ -1,0 +1,15 @@
+﻿<Window x:Class="TableBookingSystem.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Пользователь" Height="400" Width="600">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Свободные столики:" FontWeight="Bold"/>
+            <ListBox x:Name="AvailableTablesList" Height="150"/>
+
+            <TextBlock Text="Выберите время бронирования:" Margin="0,10,0,0"/>
+            <TextBox x:Name="BookingTimeTextBox" Width="200"/>
+
+            <Button Content="Забронировать" Click="BookTable_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
