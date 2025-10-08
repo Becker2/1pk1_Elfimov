@@ -63,6 +63,7 @@ namespace WpfApp2
                 admin.Show();
                 this.Close();
                 w.Close();
+                return;
             }
             if (Login.Text == "Admin" && Password.Text != "Admin")
             {
@@ -70,6 +71,7 @@ namespace WpfApp2
                     w.Close();
                     this.Show();
                     Password.Clear();
+                return;
             }
                     this.Close();
                     w.Show();

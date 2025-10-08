@@ -1,0 +1,99 @@
+﻿<Window x:Class="WpfApp2.workers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="workers" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="0">
+                <TextBlock Text="Список рабочих больницы"/>
+            </Viewbox>
+            <Viewbox Grid.Column="1">
+                <Button x:Name="Delete" Content="Удалить" Click="Delete_Click"/>
+            </Viewbox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.05*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.05*"/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0">
+                    <TextBlock Text="Приёмное отделение"/>
+                </Viewbox>
+                <ListBox Grid.Row="1" x:Name="Reception"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Name="ReceptionAdd"/>
+                    <Viewbox Grid.Column="1">
+                        <Button Name="ReceptionAddButton" Content="Добавить" Click="ReceptionAddButton_Click"/>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.05*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.05*"/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0">
+                    <TextBlock Text="Терапевтическое оделение"/>
+                </Viewbox>
+                <ListBox Grid.Row="1" Name="Therapist"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Name="TherapistAdd"/>
+                    <Viewbox Grid.Column="1">
+                        <Button Name="TherapistAddButton" Content="Добавить" Click="TherapistAddButton_Click"/>
+                    </Viewbox>
+                </Grid>
+
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.05*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.05*"/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0">
+                    <TextBlock Text="Кардиологическое отделение"/>
+                </Viewbox>
+                <ListBox Grid.Row="1" Name="Cardio"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Name="CardioAdd"/>
+                    <Viewbox Grid.Column="1">
+                        <Button Name="CardioAddButton" Content="Добавить" Click="CardioAddButton_Click"/>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+

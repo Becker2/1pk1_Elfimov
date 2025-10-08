@@ -21,13 +21,21 @@ namespace WpfApp2
     {
         private bool _isResizing = false;
         private const double AspectRatio = 16.0 / 9.0;
+
+
         public Admin()
         {
             InitializeComponent();
+            string[] names = { "Admin", "Elfimov NI" };
+            foreach (string name in names)
+            {
+                Users.Items.Add(name);
+            }
         }
         protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
         {
-            if (_isResizing) return;
+            if (_isResizing)
+                return;
 
             _isResizing = true;
 
@@ -43,11 +51,37 @@ namespace WpfApp2
             _isResizing = false;
             base.OnRenderSizeChanged(sizeInfo);
         }
-        private void Back_Click(object sender, RoutedEventArgs e)
+        workers workers = new workers();
+        Pacients pacients = new Pacients();
+        private void Workers_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            MainWindow m = new MainWindow();
-            m.Show();
+            workers.Show();
+
+
+        }
+
+        private void Pacients_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            pacients.Show();
+        }
+
+        private void DeleteUser_Click(object sender, RoutedEventArgs e)
+        {
+            Users.Items.Remove(Users.SelectedItem);
+        }
+
+        private void Users_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Window_Opening(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
+
+
